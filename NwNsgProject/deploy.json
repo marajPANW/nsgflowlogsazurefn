@@ -100,7 +100,7 @@
             "apiVersion": "2015-06-15",
             "location": "[resourceGroup().location]",
             "properties": {
-                "supportsHttpsTrafficOnly": true
+                "supportsHttpsTrafficOnly": true,
                 "accountType": "Standard_LRS"
             }
         },
@@ -140,7 +140,7 @@
             ],
             "properties": {
                 "enabled": true,
-                "httpsOnly": true
+                "httpsOnly": true,
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                 "siteConfig": {
                     "minTlsVersion": "1.2",
