@@ -47,11 +47,11 @@
         },
         "githubRepoURL": {
             "type": "string",
-            "defaultValue": "https://github.com/PaloAltoNetworks/AzureNetworkWatcherNSGFlowLogsConnector.git"
+            "defaultValue": "https://github.com/marajPANW/nsgflowlogsazurefn.git"
         },
         "githubRepoBranch": {
             "type": "string",
-            "defaultValue": "master"
+            "defaultValue": "main"
         },
         "nsgSourceDataConnection": {
             "type": "string",
