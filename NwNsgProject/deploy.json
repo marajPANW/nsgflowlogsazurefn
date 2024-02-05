@@ -202,7 +202,7 @@
                         {
                             "name": "DisableTls1.0",
                             "value": "1"
-                        }
+                        }]
                 }
             },
             "resources": [
