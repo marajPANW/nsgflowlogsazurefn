@@ -100,6 +100,7 @@
             "apiVersion": "2015-06-15",
             "location": "[resourceGroup().location]",
             "properties": {
+                "supportsHttpsTrafficOnly": true
                 "accountType": "Standard_LRS"
             }
         },
@@ -138,8 +139,11 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
             ],
             "properties": {
+                "enabled": true,
+                "httpsOnly": true
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                 "siteConfig": {
+                    "minTlsVersion": "1.2",
                     "appSettings": [
                         {
                             "name": "AzureWebJobsDashboard",
@@ -193,7 +197,12 @@
                             "name": "logIncomingJSON",
                             "value": "false"
                         }
-                    ]
+                    ],
+                    "clusterSettings": [
+                        {
+                            "name": "DisableTls1.0",
+                            "value": "1"
+                        }
                 }
             },
             "resources": [
